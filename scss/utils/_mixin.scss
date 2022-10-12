@@ -1,0 +1,80 @@
+//mixin as placeholder for font 
+
+@mixin font-Readex {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+@mixin font-Poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+// size
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+
+// fonts-face
+@mixin font($fontName, $folderName, $fileName, $weight, $style) {
+    @font-face {
+      font-family: #{$fontName};
+      font-display: swap;
+      src: url("../fonts/#{$folderName}/#{$fileName}.woff") format("woff"), url("../fonts/#{$folderName}/#{$fileName}.woff2") format("woff2");
+      font-weight: #{$weight};
+      font-style: #{$style};
+    }
+  }
+
+// anim
+@mixin transition($property: all, $speed: 0.3s, $time-function: ease) {
+    transition: $property $speed $time-function;
+}
+
+
+// media screen
+@mixin media($width) {
+    @media only screen and (max-width: $width + "px") {
+        @content;
+    }
+}
+
+@mixin min-media($width) {
+    @media only screen and (min-width: $width + "px") {
+        @content;
+    }
+}
+
+// support hover or not
+@mixin hover($transition: 0.3s, $properties-list: all) {
+    @media (any-hover: hover) {
+        transition-duration: $transition;
+        transition-property: $properties-list;
+        &:hover {
+            @content;
+        }
+    }
+}
+
+//font-size-height 
+@mixin font-settings($size, $height) {
+    font-size: $size + px;
+    line-height: decimal-round( $height / $size, 2);
+}
+
+@mixin hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

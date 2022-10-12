@@ -1,0 +1,33 @@
+.callback {
+    margin-top: 75px;
+    padding: 130px 0px;
+    background-image: linear-gradient(90.87deg, rgba(255, 104, 1, 0.8) 0.72%, rgba(255, 32, 1, 0.8) 99.25%), url(../images/call-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    &__inner {
+        max-width: 462px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h2-title {
+        margin-bottom: 16px;
+        text-align: center;
+        color: $light;
+    }
+    &__button {
+        background-color: $light;
+        padding: 4.5px 30px;
+        @include font-settings(14, 47);
+        text-transform: capitalize;
+        border-radius: 15px;
+        color: $primary;
+        font-weight: 600;
+        border: 2px solid $light !important;
+        @include hover {
+            background-color: $transparent;
+            color: $light;
+        }
+    }
+}

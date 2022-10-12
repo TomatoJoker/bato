@@ -1,14 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@400;500;600&family=Readex+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Main</title>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header__left">
+                        <div class="logo">
+                            <img src="./images/logo.svg" width="70" height="92" alt="logo">
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <nav>
+                            <ul class="menu">
+                                <li class="menu__item"><a href="#">Nous découvrir</a></li>
+                                <li class="menu__item"><a href="#">Nos activités</a>
+                                    <ul class="menu__sub-menu">
+                                        <li class="menu__item"><a href="#">Ressourceries</a></li>
+                                        <li class="menu__item"><a href="#">Borne de collecte</a></li>
+                                        <li class="menu__item"><a href="#">Valorisation textile</a></li>
+                                        <li class="menu__item"><a href="#">Nos boutiks</a></li>
+                                        <li class="menu__item menu__info-link"><a href="#">Nos formations</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item"><a href="#">Nos actualités</a></li>
+                                <li class="menu__item"><a href="#">Nos adresses</a></li>
+                                <li class="menu__item"><a href="#">Postuler</a></li>
+                            </ul>
+                        </nav>
+                        <a href="tel:0596763818" class="header__button"><svg class="icon" width="14" height="14">
+                                <use href="./i/sprite.svg#phone"></use>
+                            </svg>0596 76 38 18</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="callback">
+                <div class="container">
+                    <div class="callback__inner">
+                        <h2 class="h2-title">Grow Your Company Faster
+                            Than Ever Before</h2>
+                        <button type="button" data-fancybox data-src="#modal" class="callback__button">Contact Us</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="contact-modal" id="modal">
+            <button type="button" data-fancybox-close="" class="contact-modal__close">
+                <svg class="icon" width="20" height="20">
+                    <use href="./i/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <h2 class="h2-title">Contact us</h2>
+            <form action="" class="form">
+                <div class="row">
+                    <div class="form__input">
+                        <input type="text" name="user-first-name" id="first-name">
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="form__input">
+                        <input type="text" name="user-last-name" id="last-name">
+                        <label for="last-name">Last Name</label>
+                    </div>
+                </div>
+                <div class="form__input">
+                    <input type="text" name="user-mail" id="email">
+                    <label for="email">Your email</label>
+                </div>
+                <div class="form__input">
+                    <input type="text" name="user-company" id="company">
+                    <label for="company">Company name (optional)</label>
+                </div>
+                <div class="form__input">
+                    <input type="text" name="user-enqiry" id="enqiry">
+                    <label for="enqiry">Enqiry</label>
+                </div>
+                <div class="form__privacy">
+                    <label class="form__check" for="check">
+                        <input type="checkbox" name="user-check" id="check">
+                        <span>
+                            <svg width="12" height="9" class="icon icon__stroke">
+                                <use href="./i/sprite.svg#check"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <span>I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
+                </div>
+                <button type="submit" class="form__button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

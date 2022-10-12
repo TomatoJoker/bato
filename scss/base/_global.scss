@@ -1,0 +1,53 @@
+body {
+    @include font-Poppins;
+    @include font-settings(14, 24);
+    color: $secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h6,
+.h1-title,
+.h2-title,
+.h3-title,
+.h4-title,
+.h5-title,
+.h6-title {
+    display: block;
+}
+
+h1,
+.h1-title {
+    @include font-settings(42, 52);
+}
+
+h2,
+.h2-title {
+    @include font-settings(32, 42);
+}
+
+img {
+    display: block;
+}
+
+section,
+footer {
+    max-width: 1920px;
+    margin: auto;
+    width: 100%;
+}
+
+input {
+    background-color: $transparent;
+    border: 0;
+}
+
+button {
+    background-color: $transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
